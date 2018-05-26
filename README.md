@@ -6,10 +6,9 @@ This repository is created to help you to understand basic algorithms like sorti
   $ ./InsertionSort  
 
 ## Java Compilation and Execution commands  
-  $ javac InsertionSort.java
-  $ java InsertionSort [note: in java InsertionSort is the name of your class which has main() method]  
+  $ javac InsertionSort.java  
+  $ java InsertionSort   
+  [note: in java InsertionSort is the name of your class which has main() method]  
 
 
 Note: we prefer writing code in command line editor like vim. In case you are facing problem with you editor like XCode, Eclipse etc then please check the tutorial for your editor.   
-
-
