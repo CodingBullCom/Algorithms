@@ -58,4 +58,5 @@ int main() {
      rotate_by_90_degree_anticlockwise(array);
      cout << "Printing array after rotation" << endl;
      printArray(array);
+     return 0;
 }
