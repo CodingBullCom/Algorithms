@@ -8,7 +8,7 @@
 // it can be used/distributed without any restriction.
 
 // find odd number from numbers where all numbers are in pair except one
-// Input:: 7, 3, 9, 3, 1, 7, 2, 9, 2 outpit:: 1
+// Input:: 7, 3, 9, 3, 1, 7, 2, 9, 2 output:: 1
 
 #include <iostream>
 #include <vector>
