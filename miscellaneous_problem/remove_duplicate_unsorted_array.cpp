@@ -54,7 +54,11 @@ void print_array(vector<int> arr) {
 
 int main() {
      vector<int> value {1, 2, 5, 1, 7, 2, 4, 2};
+<<<<<<< HEAD
      cout << "Remove dumplicate using unordered set" << endl;
+=======
+     cout << "Remove dumplicate using unordered map" << endl;
+>>>>>>> Add: Remove dumplicate using unordered set
      cout << "Original array:: ";
      print_array(value);
      vector unique_values = remove_duplicate_map(value);
