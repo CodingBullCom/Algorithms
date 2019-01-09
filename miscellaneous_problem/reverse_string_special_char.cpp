@@ -1,6 +1,6 @@
 // File: reverse_string_special_char.cpp
 // Created on: 6th Jan 2019
-// Updated on: 6th Jan 2019
+// Updated on: 9th Jan 2019
 // Author: Pawan Kumar Singh [pawan@codingbull.com]
 // http://www.codingbull.com
 //
@@ -16,9 +16,15 @@
 using namespace std;
 
 bool is_special_char(char ch) {
-    if ((ch >= 'a' && ch >= 'z') || (ch >= 'A' && ch >= 'Z'))
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
       return false;
     return true;
+}
+
+void swap(string &str, int i, int j) {
+  char temp = str[i];
+  str[i] = str[j];
+  str[j] = temp;
 }
 
 string reverse_string_without_affecting_special_char(string str) {
@@ -30,9 +36,7 @@ string reverse_string_without_affecting_special_char(string str) {
          while(is_special_char(return_string[j]))
               j--;
          if(i < j) {
-              char temp = return_string[i];
-              return_string[i] = return_string[j];
-              return_string[j] = temp;
+              swap(return_string, i, j);
               i++;
               j--;
           }
@@ -42,6 +46,8 @@ string reverse_string_without_affecting_special_char(string str) {
 
 int main() {
     string str = "a!!!b.c.d,e'f,ghi";
+    cout << "Original string:: " << str << endl;
+    cout << "Reversed string:: ";
     cout << reverse_string_without_affecting_special_char(str) << endl;
     return 0;
 }
