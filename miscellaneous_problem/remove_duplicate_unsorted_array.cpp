@@ -14,10 +14,11 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
-vector<int> remove_duplicate(vector<int> arr) {
+vector<int> remove_duplicate_map(vector<int> arr) {
     vector<int> return_values;
     unordered_map<int, int> map;
     for (int temp : arr) {
@@ -25,6 +26,19 @@ vector<int> remove_duplicate(vector<int> arr) {
           //Not found in map
           return_values.push_back(temp);
           map[temp] = temp;
+      }
+    }
+    return return_values;
+}
+
+vector<int> remove_duplicate_set(vector<int> arr) {
+    vector<int> return_values;
+    unordered_set<int> set;
+    for (int temp : arr) {
+      if (set.find(temp) == set.end()) {
+          //Not found in map
+          return_values.push_back(temp);
+          set.insert(temp);
       }
     }
     return return_values;
@@ -40,6 +54,16 @@ void print_array(vector<int> arr) {
 
 int main() {
      vector<int> value {1, 2, 5, 1, 7, 2, 4, 2};
-     vector unique_values = remove_duplicate(value);
+     cout << "Remove dumplicate using unordered set" << endl;
+     cout << "Original array:: ";
+     print_array(value);
+     vector unique_values = remove_duplicate_map(value);
+     cout << "Duplicate removed:: ";
+     print_array(unique_values);
+     cout << "Remove dumplicate using unordered set" << endl;
+     cout << "Original array:: ";
+     print_array(value);
+     unique_values = remove_duplicate_set(value);
+     cout << "Duplicate removed:: ";
      print_array(unique_values);
 }
