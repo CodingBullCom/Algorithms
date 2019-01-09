@@ -1,6 +1,6 @@
 // File: remove_duplicate_unsorted_array.cpp
 // Created on: 6th Jan 2019
-// Updated on: 6th Jan 2019
+// Updated on: 9th Jan 2019
 // Author: Pawan Kumar Singh [pawan@codingbull.com]
 // http://www.codingbull.com
 //
