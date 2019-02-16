@@ -37,6 +37,6 @@ int ways(int arr[ROWS][COLS]) {
 }
 
 int main() {
-    int arr[ROWS][COLS] = {{1, 0, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
+    int arr[ROWS][COLS] = {{1, 0, 1, 1}, {1, 1, 1, 0}, {1, 1, 0, 1}, {0, 1, 1, 1}, {0, 1, 1, 1}};
     cout << ways(arr) << endl;
 }
